@@ -232,10 +232,10 @@ pre {
 
 		<section class='col-xs-12 col-sm-6 col-md-6'>
 
-			<h2>Powered by Łukasz Drzyzga &copy; 2016</h2>
+			<h2>Powered by Łukasz Drzyzga &copy; 2016</h2>
 
 
-
+			<br /> <%= new java.util.Date() %><br />
 		</section>
 
 

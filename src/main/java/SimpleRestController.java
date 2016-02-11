@@ -6,14 +6,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/rest")
 public class SimpleRestController {
 
 	// Logger instance
 	private static final Logger logger = Logger.getLogger(SimpleRestController.class);
 
-	@RequestMapping(value = "/<add method name here>", method = RequestMethod.GET)
-	public String getSomething(@RequestParam(value = "request") String request,	@RequestParam(value = "version", required = false, defaultValue = "1") int version) {
+	@RequestMapping(value = "/messages", method = RequestMethod.GET)
+	public String getMessages() {
+		
+		return "Tutaj będzie zwracana lista wiadomości ;)";
+	}
+	
+	@RequestMapping(value = "/message", method = RequestMethod.GET)
+	public String getMessage(@RequestParam(value = "request") String request,	@RequestParam(value = "version", required = false, defaultValue = "1") int version) {
 		
 		if (logger.isDebugEnabled()) {
 			logger.debug("Start getSomething");
@@ -45,7 +50,7 @@ public class SimpleRestController {
 		return response;
 	}
 
-	@RequestMapping(value = "/<add method name here>", method = RequestMethod.POST)
+	@RequestMapping(value = "/message", method = RequestMethod.POST)
 	public String postSomething(@RequestParam(value = "request") String request,@RequestParam(value = "version", required = false, defaultValue = "1") int version) {
 		
 		if (logger.isDebugEnabled()) {
@@ -78,7 +83,7 @@ public class SimpleRestController {
 		return response;
 	}
 
-	@RequestMapping(value = "/<add method name here>", method = RequestMethod.PUT)
+	/*@RequestMapping(value = "/<add method name here>", method = RequestMethod.PUT)
 	public String putSomething(@RequestBody String request,@RequestParam(value = "version", required = false, defaultValue = "1") int version) {
 		
 		if (logger.isDebugEnabled()) {
@@ -140,5 +145,5 @@ public class SimpleRestController {
 			logger.debug("result: '" + response + "'");
 			logger.debug("End putSomething");
 		}
-	}
+	}*/
 }

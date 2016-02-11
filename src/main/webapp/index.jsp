@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>NearSight</title>
@@ -235,15 +236,16 @@ pre {
 			<h2>Powered by Łukasz Drzyzga &copy; 2016</h2>
 
 
-			<br /> <%= new java.util.Date() %><br />
+			<br /> <br />
+			<%=new java.util.Date()%><br />
 		</section>
 
-
-		<footer>
-			<div class="logo">
-				<a href="https://www.openshift.com/"></a>
-			</div>
-		</footer>
 	</section>
+	<footer>
+		<div class="logo">
+			<a href="https://www.openshift.com/"></a>
+		</div>
+	</footer>
+
 </body>
 </html>

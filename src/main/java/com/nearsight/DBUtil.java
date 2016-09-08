@@ -33,7 +33,7 @@ public class DBUtil {
 		return DBUtil.mongoClient;	
 	}
 	
-	public DB getNearDatabase() throws UnknownHostException
+	public static DB getNearDatabase() throws UnknownHostException
 	{
 		boolean authenticationResult;
 		

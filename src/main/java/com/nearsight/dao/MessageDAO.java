@@ -16,7 +16,7 @@ import com.nearsight.dto.Message;
 
 public class MessageDAO {
 	
-	private static final String messageCollectionName = "message";
+	private static final String messageCollectionName = "Message";
 	private DB nearDatabase;
 	
 	private DBCollection collection;
@@ -39,7 +39,7 @@ public class MessageDAO {
 	public List<Message> getMessages()
 	{
 		List<Message> messageList = new ArrayList<Message>();
-		/*MongoTemplate mongoTemplate = new MongoTemplate(DBUtil.getMongoDBFactory());
+		MongoTemplate mongoTemplate = new MongoTemplate(DBUtil.getMongoDBFactory());
 		
 		DBCursor cursor = getCollection().find();
 		
@@ -50,9 +50,9 @@ public class MessageDAO {
 			Message message = mongoTemplate.getConverter().read(Message.class, dbObject);
 			
 			messageList.add(message);
-		}*/
+		}
 		
-		Set<String> tables = null;
+		/*Set<String> tables = null;
 		try {
 			tables = DBUtil.getNearDatabase().getCollectionNames();
 		} catch (UnknownHostException e) {
@@ -66,7 +66,7 @@ public class MessageDAO {
 			Message message = new Message();
 			message.setContent(coll);
 			messageList.add(message);
-		}
+		}*/
 
 		
 		return messageList;

@@ -1,6 +1,7 @@
 package com.nearsight;
 
 import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,10 +24,10 @@ public class SimpleRestController {
 	}
 	
 
-	@RequestMapping(value = "/messages", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
-	public String getMessage(@RequestParam(value = "user") String user) {
+	@RequestMapping(value = "user/{username}/messages", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+	public String getUserMessages(@PathVariable("username") String username) {
 
-		return "Tutaj będzie zwracana lista wiadomości użytkownika: " + user;
+		return "Tutaj będzie zwracana lista wiadomości użytkownika: " + username;
 	}
 
 	@RequestMapping(value = "/message", method = RequestMethod.GET)

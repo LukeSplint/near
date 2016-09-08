@@ -55,7 +55,7 @@ public class DBUtil {
 	{
 		if (DBUtil.mongoDBFactory == null)
 		{
-			DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName);
+			//DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName);
 		}
 		
 		return DBUtil.mongoDBFactory;

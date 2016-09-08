@@ -1,7 +1,6 @@
 package com.nearsight;
 
 import org.apache.log4j.Logger;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SimpleRestController {
+	
+	Near near = new Near();
 
 	// Logger instance
 	private static final Logger logger = Logger.getLogger(SimpleRestController.class);
@@ -16,7 +17,9 @@ public class SimpleRestController {
 	@RequestMapping(value = "/messages", method = RequestMethod.GET)
 	public String getMessages() {
 		
-		return "Tutaj będzie zwracana lista wiadomości ;)";
+		return near.getMessagesAsJSON();
+		
+		//return "Tutaj będzie zwracana lista wiadomości ;)";
 	}
 	
 	@RequestMapping(value = "/message", method = RequestMethod.GET)

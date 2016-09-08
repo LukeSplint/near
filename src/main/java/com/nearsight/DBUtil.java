@@ -2,6 +2,7 @@ package com.nearsight;
 
 import java.net.UnknownHostException;
 
+import org.springframework.data.authentication.UserCredentials;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
@@ -55,6 +56,7 @@ public class DBUtil {
 	{
 		if (DBUtil.mongoDBFactory == null)
 		{
+			DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName, new UserCredentials(mongoUser, mongoPassword));
 			//DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName);
 		}
 		

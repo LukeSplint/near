@@ -4,10 +4,12 @@ import java.net.UnknownHostException;
 
 import org.springframework.data.authentication.UserCredentials;
 import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.config.MongoCredentialPropertyEditor;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
 
 public class DBUtil {
 	
@@ -56,7 +58,8 @@ public class DBUtil {
 	{
 		if (DBUtil.mongoDBFactory == null)
 		{
-			DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName, new UserCredentials(mongoUser, mongoPassword));
+			//MongoCredential mongoCredential = MongoCredential.createCredential(mongoUser, nearDatabaseName, mongoPassword.toCharArray());
+			DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName);
 			//DBUtil.mongoDBFactory = new SimpleMongoDbFactory(mongoClient, nearDatabaseName);
 		}
 		

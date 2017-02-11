@@ -1,4 +1,4 @@
-package com.nearsight;
+package com.splintart.nearsight.web.service;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -7,24 +7,10 @@ import java.util.List;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.mongodb.DB;
-import com.nearsight.dao.MessageDAO;
-import com.nearsight.dto.Message;
 
 public class Near {
 	
-	DBUtil dbUtil;
-	
-	private DBUtil getDBUtil()
-	{
-		if (dbUtil == null)
-		{
-			dbUtil = new DBUtil();
-		}
-		
-		return dbUtil;
-	}
-	
-	public List<Message> getMessages()
+	/*public List<Message> getMessages()
 	{
 		DB nearDatabase;
 		
@@ -65,5 +51,5 @@ public class Near {
 		
 		
 	}
-
+*/
 }

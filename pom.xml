@@ -1,11 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>near</groupId>
+	<groupId>com.splintart.nearsight</groupId>
 	<artifactId>near</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>near</name>
+	<name>NearSight</name>
+	<!-- <modules> <module>../DataAccessLayer</module> <module>../ServiceLayer</module> 
+		<module>../WebServiceLayer</module> </modules> -->
 	<repositories>
 		<repository>
 			<id>eap</id>
@@ -36,6 +38,16 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 	<dependencies>
+		<!-- <dependency> <groupId>com.splintart.nearsight</groupId> <artifactId>ServiceLayer</artifactId> 
+			<version>1.0-SNAPSHOT</version> </dependency> -->
+		<dependency>
+			<groupId>com.splintart.nearsight</groupId>
+			<artifactId>ServiceLayer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+			<!-- <groupId>com.splintart.nearsight</groupId> <artifactId>near</artifactId> 
+				<version>1.0</version> <type>war</type> -->
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -79,6 +91,12 @@
 			<version>1.9.13</version>
 		</dependency>
 	</dependencies>
+
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-war-plugin</artifactId> <version>3.0.0</version> <configuration> 
+		<webResources> <resource> this is relative to the pom.xml directory <directory>resource2</directory> 
+		</resource> </webResources> </configuration> </plugin> </plugins> </build> -->
+
 	<profiles>
 		<profile>
 			<!-- When built in OpenShift the 'openshift' profile will be used when 

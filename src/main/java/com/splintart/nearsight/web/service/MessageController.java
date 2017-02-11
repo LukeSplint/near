@@ -1,30 +1,39 @@
-package com.nearsight;
+package com.splintart.nearsight.web.service;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class SimpleRestController {
+import com.splintart.nearsight.service.MessageService;
+import com.splintart.nearsight.service.UtilService;
 
-	Near near = new Near();
+@RestController
+public class MessageController {
+
+//	Near near = new Near();
+	
+	@Autowired
+	MessageService messageService;
+	
+	@Autowired
+	UtilService utilService;
 
 	// Logger instance
-	private static final Logger logger = Logger.getLogger(SimpleRestController.class);
+	private static final Logger logger = Logger.getLogger(MessageController.class);
 
-	@RequestMapping(value = "/messages", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+	@RequestMapping(value = "/messages", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public String getMessages() {
-
-		return near.getMessagesAsJSON();
-
-		// return "Tutaj będzie zwracana lista wiadomości ;)";
+		
+		return utilService.ObjectToJson(messageService.getAllMessages());
+		//return near.getMessagesAsJSON();
 	}
 	
 
-	@RequestMapping(value = "user/{username}/messages", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+	@RequestMapping(value = "users/{username}/messages", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
 	public String getUserMessages(@PathVariable("username") String username) {
 
 		return "Tutaj będzie zwracana lista wiadomości użytkownika: " + username;

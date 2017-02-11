@@ -15,7 +15,7 @@ import com.splintart.nearsight.service.UtilService;
 public class MessageController {
 
 //	Near near = new Near();
-	
+	/*
 	@Autowired
 	MessageService messageService;
 	
@@ -107,7 +107,7 @@ public class MessageController {
 		return response;
 	}
 
-	/*
+	
 	 * @RequestMapping(value = "/<add method name here>", method =
 	 * RequestMethod.PUT) public String putSomething(@RequestBody String
 	 * request,@RequestParam(value = "version", required = false, defaultValue =
@@ -146,5 +146,5 @@ public class MessageController {
 	 * 
 	 * if (logger.isDebugEnabled()) { logger.debug("result: '" + response +
 	 * "'"); logger.debug("End putSomething"); } }
-	 */
-}
+	 
+*/}

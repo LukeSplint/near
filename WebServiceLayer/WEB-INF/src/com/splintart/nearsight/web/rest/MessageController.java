@@ -89,7 +89,7 @@ public class MessageController {
 	@RequestMapping(value = "users/{username}/messages", method = RequestMethod.GET, produces = PRODUCES_TEXT_UTF_8)
 	public String getUserMessages(@PathVariable("username") String username) {
 
-		return "Tutaj bêdzie zwracana lista wiadomoœci u¿ytkownika: " + username;
+		return "Tutaj bÄ™dzie zwracana lista wiadomoÅ›ci uzytkownika: " + username;
 	}
 
 	// POST methods

@@ -2,15 +2,12 @@ package com.splintart.nearsight.data;
 
 import java.net.UnknownHostException;
 
-import org.springframework.data.authentication.UserCredentials;
 import org.springframework.data.mongodb.MongoDbFactory;
-import org.springframework.data.mongodb.config.MongoCredentialPropertyEditor;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
-import com.mongodb.MongoCredential;
 import com.splintart.nearsight.NearSightException;
 
 public class DBUtil {

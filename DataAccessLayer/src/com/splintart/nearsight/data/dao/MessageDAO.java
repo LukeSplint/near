@@ -1,17 +1,10 @@
 package com.splintart.nearsight.data.dao;
 
-import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
 import com.splintart.nearsight.NearSightException;
 import com.splintart.nearsight.data.DBUtil;
 import com.splintart.nearsight.data.dto.Message;

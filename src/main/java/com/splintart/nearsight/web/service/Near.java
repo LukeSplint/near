@@ -1,13 +1,5 @@
 package com.splintart.nearsight.web.service;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-import java.util.List;
-
-import org.codehaus.jackson.map.ObjectMapper;
-
-import com.mongodb.DB;
-
 public class Near {
 	
 	/*public List<Message> getMessages()

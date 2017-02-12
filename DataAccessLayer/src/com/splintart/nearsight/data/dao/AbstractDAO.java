@@ -1,6 +1,5 @@
 package com.splintart.nearsight.data.dao;
 
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 

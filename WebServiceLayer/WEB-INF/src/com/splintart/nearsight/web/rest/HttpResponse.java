@@ -22,19 +22,20 @@ public class HttpResponse<T> extends ResponseEntity<Response<T>> {
 	Response<T> response;
 	
 	public HttpResponse(Throwable e) {
-		super(new Response<>(e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);		
+		
+		super(new Response<T>(e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);		
 	}
 	
 	public HttpResponse(Throwable e, HttpStatus httpStatus) {
-		super(new Response<>(e.getMessage()), httpStatus);		
+		super(new Response<T>(e.getMessage()), httpStatus);		
 	}
 	
 	public HttpResponse(ErrorCode errorCode) {
-		super(new Response<>(errorCode.getMessage()), errorCode.getHttpStatus());		
+		super(new Response<T>(errorCode.getMessage()), errorCode.getHttpStatus());		
 	}
 	
 	public HttpResponse(String message) {
-		super(new Response<>(message), HttpStatus.INTERNAL_SERVER_ERROR);
+		super(new Response<T>(message), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	public HttpResponse(T content) {
@@ -46,7 +47,7 @@ public class HttpResponse<T> extends ResponseEntity<Response<T>> {
 	}
 	
 	public HttpResponse(String message, HttpStatus httpStatus) {
-		super(new Response<>(message), httpStatus);
+		super(new Response<T>(message), httpStatus);
 	}
 	
 	public HttpResponse(T content, HttpStatus httpStatus) {

@@ -237,9 +237,21 @@ pre {
 
 
 			<br /> <br />
-			<%=new java.util.Date()%><br />
+			
+			<a href="./snoop.jsp">Snoop</a>
+			
+			RestApi methods:
+			<ul>
+			<li><a href="./v1/test">test</a></li>
+			<li><a href="./v1/testResponse">testResponse</a></li>
+			<li><a href="./v1/messages">getAllMessages</a></li>
+			</ul>
+			
+			
 		</section>
 
+
+	<%=new java.util.Date()%>
 	</section>
 	<footer>
 		<div class="logo">

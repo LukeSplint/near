@@ -39,5 +39,5 @@ public class MessageService {
 		messageDAO.add(message);
 	}
 	
-	//TODO own List interface or class extends List, który mia³by dodatkow¹ metodê AsJsonString
+	//TODO own List interface or class extends List, ktory mialby dodatkowo medote AsJsonString
 }

@@ -1,9 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.splintart.nearsight</groupId>
 	<artifactId>DataAccessLayer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${global.version}</version>
 	<packaging>jar</packaging>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -12,18 +11,24 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${global.java.version}</source>
+					<target>${global.java.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	
+	<parent>
+		<groupId>${global.group.id}</groupId>
+		<artifactId>near</artifactId>
+		<version>${global.parent.version}</version>
+	</parent>
+	
 	<dependencies>
-
 		<dependency>
-			<groupId>com.splintart.nearsight</groupId>
+			<groupId>${global.group.id}</groupId>
 			<artifactId>NearSightUtil</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${global.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

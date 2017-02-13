@@ -227,7 +227,7 @@ pre {
 
 	<section class='container'>
 		<hgroup>
-			<h1>Welcome at the NearSight&trade;</h1>
+			<h1>NearSight&trade; - RestApi</h1>
 		</hgroup>
 
 
@@ -236,7 +236,8 @@ pre {
 			<h2>Powered by Łukasz Drzyzga &copy; 2016</h2>
 
 
-			<br /> <br /> <a href="./snoop.jsp">Snoop</a> RestApi methods:
+			<br /> <br /> <a href="./snoop.jsp">Snoop</a>
+			<br />RestApi methods:
 			<ul>
 				<li><a href="./v1/test">test</a></li>
 				<li><a href="./v1/testResponse">testResponse</a></li>

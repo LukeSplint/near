@@ -18,7 +18,7 @@
 	<properties>
 		<global.group.id>com.splintart.nearsight</global.group.id>
 		<global.parent.version>1.0</global.parent.version>
-		<global.version>0.1-SNAPSHOT</global.version>
+		<global.version>1.0</global.version>
 		<global.java.version>1.7</global.java.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

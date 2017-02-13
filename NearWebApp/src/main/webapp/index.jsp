@@ -227,7 +227,7 @@ pre {
 
 	<section class='container'>
 		<hgroup>
-			<h1>Welcome at the NearSight&trade; - NearWebApp</h1>
+			<h1>Welcome at the NearSight&trade;</h1>
 		</hgroup>
 
 
@@ -236,12 +236,16 @@ pre {
 			<h2>Powered by Łukasz Drzyzga &copy; 2016</h2>
 
 
-			<br /> <br />
-			<%=new java.util.Date()%><br />
+			<br /> <br /><a href="./snoop.jsp">Rest API</a>
+			
+			
 		</section>
 
 	</section>
 	<footer>
+	
+	<%=new java.util.Date()%><br />
+	
 		<div class="logo">
 			<a href="https://www.openshift.com/"></a>
 		</div>
